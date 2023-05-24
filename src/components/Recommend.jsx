@@ -11,7 +11,7 @@ export default function Recommend({queries, count}) {
     React.useEffect(() => {
 
         let randomNumber = Math.floor(Math.random()*100) + 1;
-        const url = "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&api_key=3c76038a7be4415606253aef4f33c245&artist=" + queries.artistWords + "&track=" + queries.songWords + "&format=json";
+        const url = "https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&api_key=3c76038a7be4415606253aef4f33c245&artist=" + queries.artistWords + "&track=" + queries.songWords + "&format=json";
 
         fetch(url)
         .then(response => {
