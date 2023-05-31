@@ -29,7 +29,7 @@ export default function Recommend({queries, count}) {
 
     return (
         <div>
-            {para ? <h1 className='lyrics'>try:<br />{para.song} by {para.artist}</h1> : "Loading..."}
+            {para.song ? <h1 className='lyrics'>try:<br />{para.song} by {para.artist}</h1> : "Loading..."}
         </div>
     );
 }
