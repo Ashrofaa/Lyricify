@@ -110,14 +110,10 @@ body {
 
 .navbar-brand {
     margin-left: 7%;
-    font-size: 2rem;
+    font-size: 2rem !important;
     font-weight: 900;
-    color: #FFF8E6;
+    color: #FFF8E6 !important;
     cursor: pointer;
-}
-
-.navbar-brand:hover {
-    color: #fff8e6e3;
 }
 
 .listText:hover {
@@ -131,10 +127,8 @@ body {
 }
 
 .listText {
-    display: inline-block;
-    color: #FFF8E6;
-    font-size: 17px;
-    cursor: pointer;
+    color: #FFF8E6 !important;
+    font-size: 17px !important;
 }
 
 .navbar-nav {

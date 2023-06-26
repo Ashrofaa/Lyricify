@@ -2,6 +2,8 @@ import React from 'react';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import Search from './Search';
 import Home from "./Home";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 export default function App() {
     const navigate = useNavigate();
@@ -16,13 +18,13 @@ export default function App() {
 
     return (
         <div>
-            <div className='navbar navContainer'>
-                <h1 className='logo navbar-brand' onClick={navigateHome}>Lyricify</h1>
-                <ul className='navbar-nav'>
-                    <li className='nav-item listItem'><a className='nav-link listText' onClick={navigateHome}>Home</a></li>
-                    <li className='nav-item listItem'><a className='nav-link listText' onClick={navigateLyrics}>Get Lyrics</a></li>
-                </ul>
-            </div>
+            <Navbar className='navContainer'>
+                <Navbar.Brand onClick={navigateHome}>Lyricify</Navbar.Brand>
+                <Nav className="ms-auto">
+                    <Nav.Link onClick={navigateHome} className='listText'>Home</Nav.Link>
+                    <Nav.Link onClick={navigateLyrics} className='listText'>Get Lyrics</Nav.Link>
+                </Nav>
+            </Navbar>
             <Routes>
                     <Route path="/lyrics" element={<Search />} />
                     <Route path="/" element={<Home />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import img from "../mobile.jpg";
-import Carousel from './Carousel';
+import CarouselSection from './CarouselSection';
 
 export default function Home() {
     return (
@@ -18,7 +18,7 @@ export default function Home() {
             </div>
             <div id='test'>
                 <h1 className='test-header'>Testimonials</h1>
-                <Carousel />
+                <CarouselSection />
             </div>
         </div>
     )
